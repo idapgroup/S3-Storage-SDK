@@ -9,12 +9,16 @@
     "storage"
   ],
   "license": "BSD-3-Clause",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "minimum-stability": "stable",
   "authors": [
     {
       "name": "Vlad Chyzhevych",
       "email": "vlad.chyzhevych@idapgroup.com"
+    },
+    {
+      "name": "Igor Matviichuk",
+      "email": "igor.matviichuk@idapgroup.com"
     }
   ],
   "require": {

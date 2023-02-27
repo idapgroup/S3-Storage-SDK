@@ -1,4 +1,4 @@
-# Viber SDK
+# S3 Storage SDK
 
 S3 Storage SDK for working with AWS S3 Storage.
 
@@ -8,7 +8,7 @@ The documentation for the AWS S3 Storage Api can be found [here](https://aws.ama
 
 ## Installation
 
-The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
+The preferred way to install this extension is through [composer](https://getcomposer.org/download/).
 
 Either run
 
@@ -21,7 +21,7 @@ or add
 ```json
 {
   "require": {
-      "idapgroup/s3-storage-sdk": "^0.1.0"
+      "idapgroup/s3-storage-sdk": "^1.0.0"
   }
 }
 ```
@@ -57,7 +57,7 @@ $writeStorage = new S3Storage($s3Client, 'S3_WRITE_BUCKET', 'S3_REGION');
 #### Save file
 
 ```php
-//Create an instance of class that implements UploadedFileInterface
+// Create an instance of class that implements UploadedFileInterface
 $file = new UploadedFile();
 $readStorage->save($file, 'filename');
 ```
@@ -65,12 +65,12 @@ $readStorage->save($file, 'filename');
 #### Transfer the file to the file storage
 
 ```php
-//Create an instance of class that implements S3FileInterface or extends S3File
+// Create an instance of class that implements S3FileInterface or extends S3File
 $imageFile = new S3File('file_path', $writeStorage->getBucket());
 $readStorage->transfer($imageFile);
 ```
 
-#### Delete the file form the file storage
+#### Delete the file from the file storage
 
 ```php
 $readStorage->delete('file_path');
